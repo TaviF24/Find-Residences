@@ -1,0 +1,55 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PDF-Reading.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fields&Sequence_1",
+        "pathPDFScanned&Flowchart_1",
+        "pathPDFNative&Flowchart_1",
+        "outputRegex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "fieldsToSearch",
+        "outputFromPDF",
+        "isValidated"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PDF-Validation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "allFieldsAreFound&Sequence_1",
+        "match&Sequence_3",
+        "atLeastOneFound&Sequence_2",
+        "j&Sequence_2",
+        "i&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "inputFromPDF",
+        "fieldsToSearch",
+        "found"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
