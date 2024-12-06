@@ -12,12 +12,14 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "excelFilePath&Sequence_1",
         "outputRegex&Sequence_1",
         "fields&Sequence_1",
         "pathPDFScanned&Flowchart_1",
         "pathPDFNative&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "excelOutput",
         "fieldsCategories",
         "fieldsToSearch",
         "outputFromPDF",
@@ -38,8 +40,10 @@
       "Path": "PDF-Validation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "excelOutput&Sequence_9",
-        "excelFilePath&Sequence_9",
+        "sumCheck&Sequence_8",
+        "ibanIsFound&Sequence_8",
+        "ibanRegex&Sequence_14",
+        "bankName&Sequence_1",
         "pdfField&Sequence_6",
         "dictionaryOfDataPDF&Sequence_1",
         "allFieldsAreFound&Sequence_1",
@@ -49,6 +53,7 @@
         "i&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "excelInput",
         "fieldsCategories",
         "inputFromPDF",
         "fieldsToSearch",
