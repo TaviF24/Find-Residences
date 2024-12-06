@@ -12,12 +12,13 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "outputRegex&Sequence_1",
         "fields&Sequence_1",
         "pathPDFScanned&Flowchart_1",
-        "pathPDFNative&Flowchart_1",
-        "outputRegex&Sequence_1"
+        "pathPDFNative&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "fieldsCategories",
         "fieldsToSearch",
         "outputFromPDF",
         "isValidated"
@@ -37,6 +38,10 @@
       "Path": "PDF-Validation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "excelOutput&Sequence_9",
+        "excelFilePath&Sequence_9",
+        "pdfField&Sequence_6",
+        "dictionaryOfDataPDF&Sequence_1",
         "allFieldsAreFound&Sequence_1",
         "match&Sequence_3",
         "atLeastOneFound&Sequence_2",
@@ -44,6 +49,7 @@
         "i&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "fieldsCategories",
         "inputFromPDF",
         "fieldsToSearch",
         "found"
