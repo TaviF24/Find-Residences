@@ -22733,15 +22733,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Octavian\\.nuget\\packages\\": {}
+    "C:\\Users\\DellMX\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Bot",
       "projectName": "Bot",
-      "projectPath": "D:\\Facultate\\RPA\\Proiect\\RPA-Project\\Bot\\.local",
-      "packagesPath": "C:\\Users\\Octavian\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultate\\RPA\\Proiect\\RPA-Project\\Bot\\.local"
+      "projectPath": "C:\\Users\\DellMX\\Documents\\GitHub\\RPA-Project\\Bot\\.local",
+      "packagesPath": "C:\\Users\\DellMX\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DellMX\\Documents\\GitHub\\RPA-Project\\Bot\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -22777,7 +22777,7 @@
             "version": "[24.11.1-preview, 24.11.1-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Octavian\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\DellMX\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
