@@ -40,18 +40,21 @@
       "Path": "PDF-Validation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ibanIsFound&Sequence_8",
-        "sumCheck&Sequence_8",
-        "senderName&Sequence_8",
+        "isValidated&Sequence_8",
+        "j&Sequence_2",
+        "atLeastOneFound&Sequence_2",
         "match&Sequence_3",
         "pdfField&Sequence_22",
         "pdfField&Sequence_6",
+        "matchIsNameAlpha&Sequence_27",
+        "ibanRegex&Sequence_14",
+        "ibanIsFound&Sequence_8",
+        "sumCheck&Sequence_8",
+        "senderName&Sequence_8",
         "i&Sequence_1",
         "allFieldsAreFound&Sequence_1",
         "dictionaryOfDataPDF&Sequence_1",
-        "bankName&Sequence_1",
-        "j&Sequence_2",
-        "atLeastOneFound&Sequence_2"
+        "bankName&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "excelInput",
