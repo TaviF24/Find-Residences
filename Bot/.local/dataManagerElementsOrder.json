@@ -66,6 +66,41 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Website1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "dynamicNrRooms&Sequence_11",
+        "locationExists&Sequence_3",
+        "dynamicRentBuy&Sequence_3",
+        "elementExists&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "nrOfRooms",
+        "price",
+        "location",
+        "buy",
+        "url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WebsiteSearch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Flowchart_1",
+        "nrOfRooms&Flowchart_1",
+        "price&Flowchart_1",
+        "location&Flowchart_1",
+        "buy&Flowchart_1",
+        "url1&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
