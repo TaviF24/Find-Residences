@@ -93,7 +93,7 @@
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="nrOfRooms">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="-3" />
+          <Literal x:TypeArguments="x:Int32" Value="3" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="variable1" />
