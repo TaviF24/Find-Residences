@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="6i-AlVZ-iUeWDJSRSzvy-w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 2576, 1408" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFcSURBVDhPYwCBt5o+4e80vC8A8W8g/k8A/36n7n3+rbpXGFjzO03vCCyKiMJv1b1DGYAMkM1YFRDGPudABvzCkND0QeXjEgPqBRmAIvilvPf/38cv/n/ObISLfQzK/P9jzcr/n7KrMAyCG/DeKur/rz3H/yODn5v2///a2vf/54Ht/38e3AHG36bN+v/ePAzVgE+x5f//vn4H1YYK/n398v/X6cNwA0D4x+Z1/z/6pSIM+LFoI1Q5EPz6/f/PjftAnf+gAv///759FcUAEP5a34ndgK/VE8ESv3YfhopADPixcS2KV3AaAPIOWGzZBqgIMCy27QaLfcquJs8AEBskBvI3VgO+z179/9/Hz2D8KaoUYsD8VcDw+AXGIDbYAJ/U/z+2bwTjL1WtcAMwExLxGJiQgBkDiwSRGJiU36t7+WOXJIzfqvuEgHMkKFeBTAMKEuMdoBqfcxDNDAwArA23N90kXV4AAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" Title="Apartamente de vânzare în București | Imobiliare.ro" Url="[urlSearch]">
+      <imageRef attrName="InformativeScreenshot" originalValue="6f6eca85dd43d00fce1ea3d61a81856c.jpg" xmlns="">0E6qMgGVN602ie2BwGb_SQw</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="urlSearch" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

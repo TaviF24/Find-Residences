@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LP6JANb1pkak9Q-ynmMkGg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.imobiliare.ro/vanzare-apartamente/bucuresti?map-latitude=44.428018465078985&amp;map-longitude=26.09682083129883&amp;map-zoom=12" CVScreenId="ceffc134-2496-40b8-9ea9-dcea663a4283" CvElementArea="868, 198, 137, 48" CvType="InputBox" DesignTimeRectangle="870, 201, 134, 42" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' class=' relative hidden h-[42px] items-center justify-between truncate whitespace-nowrap rounded-2xl bg-highlight bg-white py-2 pl-4 pr-10 font-normal leading-relaxed text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:flex lg:bg-highlight-500' parentid='search-listing-results' tag='DIV' aaname='                                                                        ' check:innerText='Nr. camere' /&gt;" Guid="16ac07d7-b02b-4dae-a558-a9912c686c2d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ceffc134-2496-40b8-9ea9-dcea663a4283" CvElementArea="641, 198, 215, 46" CvType="InputBox" DesignTimeRectangle="644, 201, 210, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                           Apartamente                                                                            Toate categoriile                                                                                                             ' aria-labelledby='listbox-label' tag='BUTTON' type='button' class='flex-1 text-left border-none text-gray-500 bg-white lg:bg-highlight rounded-2xl appearance-none block truncate w-full lg:w-[140px] xl:w-[210px] h-[42px] py-2 pl-4 pr-8 leading-relaxed focus:outline-none !bg-secondary-100 lg:bg-secondary-100' check:innerText='Apartamente' /&gt;" Guid="9e4a5952-02d3-4bce-8b0c-f5acab3e93aa" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4117ee17a01299373a36b72ccd6e7262.png" xmlns="">0e0d-KMrcGEOOw_lc4R6IMQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

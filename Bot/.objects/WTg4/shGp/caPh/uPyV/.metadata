@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Select Item 'Nr. camere'",
+  "Type": "Element",
+  "Id": "uPyVSBHMgU2WtHiY7DqA8g",
+  "Reference": "oZ1X5JKDbEez4gQkmD8CKw/uPyVSBHMgU2WtHiY7DqA8g",
+  "ParentRef": "oZ1X5JKDbEez4gQkmD8CKw/caPhm4yx2kyG07mkhq7c-w",
+  "Created": "2024-12-19T18:26:25.8821796Z",
+  "Updated": "2024-12-19T18:26:25.8821796Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

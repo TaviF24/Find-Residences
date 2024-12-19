@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Apartamente de vânzare în București  I",
+  "Type": "Screen",
+  "Id": "caPhm4yx2kyG07mkhq7c-w",
+  "Reference": "oZ1X5JKDbEez4gQkmD8CKw/caPhm4yx2kyG07mkhq7c-w",
+  "ParentRef": "oZ1X5JKDbEez4gQkmD8CKw/shGpBveoc0u-TKq3gWgGmw",
+  "Created": "2024-12-19T18:26:25.10172Z",
+  "Updated": "2024-12-19T18:26:25.10172Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

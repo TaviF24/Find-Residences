@@ -1,0 +1,585 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WebsiteImobiliare" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="url" Type="InArgument(x:String)" />
+    <x:Property Name="buy" Type="InArgument(x:Boolean)" />
+    <x:Property Name="location" Type="InArgument(x:String)" />
+    <x:Property Name="price" Type="InArgument(x:Int32)" />
+    <x:Property Name="nrOfRooms" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>WebsiteImobiliare_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="WebsiteImobiliare" sap:VirtualizedContainerService.HintSize="808,6028" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="808,5974" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[url]">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="774,5826" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="740,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Anunțuri imobiliare în România - Vânzare și închiriere proprietăți | Imobiliare." sap:VirtualizedContainerService.HintSize="740,5709" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="cc3da771-16d4-4518-93a1-330fcf2c48a2" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="706,5469" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="isPageLoaded">
+                        <Variable.Default>
+                          <Literal x:TypeArguments="x:Boolean" />
+                        </Variable.Default>
+                      </Variable>
+                      <Variable x:TypeArguments="x:String" Name="urlSearch" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="672,146" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// If buy = True, then no need to click anything else.&#xD;&#xA;&#xD;&#xA;// If buy = False, select De inchiriat" />
+                    <If Condition="[buy = False]" sap:VirtualizedContainerService.HintSize="672,528" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT'" sap:VirtualizedContainerService.HintSize="382,178" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="De închiriat">
+                            <ui:SelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="4">
+                                <x:String>De vânzare</x:String>
+                                <x:String>De închiriat</x:String>
+                              </scg:List>
+                            </ui:SelectItem.Items>
+                            <ui:SelectItem.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="41f68e5b-989d-4a3f-8366-6e1d8f33ae88" InformativeScreenshot="94a31bf75bd2f0c9e554976481bca1cd" Selector="&lt;webctrl tag='SELECT' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SelectItem.Target>
+                          </ui:SelectItem>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="672,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Enter location (City)" />
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  location_search_...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="672,187" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[location]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ac01bb4-5471-4f33-9268-4235138e8162" InformativeScreenshot="eb3142bf11102d45277a1cf81d641f4d" Selector="&lt;webctrl aria-label='location search' tag='INPUT' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="672,139" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cc8c3f66-b9cb-4ab4-9467-ba846dc0fe06" InformativeScreenshot="5bc684af8842815d7273b6bb9bd023f3" Selector="&lt;webctrl tag='BUTTON' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NGetUrl CurrentUrl="[urlSearch]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="672,119" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V4" />
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Apartamente de vânzare în București  I" sap:VirtualizedContainerService.HintSize="672,4200" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="911b5d1e-487b-4e93-8224-0da751fcc786" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="638,3958" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="nrOfRooms_StringSelect" />
+                              <Variable x:TypeArguments="x:String" Name="price_StringSelect" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="604,88" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Wait for page to load" />
+                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="604,336" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                              <ui:InterruptibleDoWhile.Body>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isPageLoaded]" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84cf659f-6d6c-4463-a6de-792dce3ff5ba" InformativeScreenshot="3852581ff52f00541821c6df1b01c414" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search-listing-results' tag='DIV' innertext='*Nr. camere**' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                </Sequence>
+                              </ui:InterruptibleDoWhile.Body>
+                              <ui:InterruptibleDoWhile.Condition>
+                                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="isPageLoaded = False" />
+                              </ui:InterruptibleDoWhile.Condition>
+                            </ui:InterruptibleDoWhile>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="604,117" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;page loaded&quot;]" />
+                            <ui:Comment sap:VirtualizedContainerService.HintSize="604,107" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Convert nrOfRooms to a String, so I can use it in the Select element on the page." />
+                            <If Condition="[nrOfRooms &lt; 4]" sap:VirtualizedContainerService.HintSize="604,531" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If.Then>
+                                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,196" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[nrOfRooms_StringSelect]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[nrOfRooms.ToString()]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else If nrOfRooms &gt;= 4, set as &quot;4+&quot;" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[nrOfRooms_StringSelect]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">4+</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'DIV'" sap:VirtualizedContainerService.HintSize="604,187" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[nrOfRooms_StringSelect]">
+                              <ui:SelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>1</x:String>
+                                  <x:String>2</x:String>
+                                  <x:String>3</x:String>
+                                  <x:String>4+</x:String>
+                                </scg:List>
+                              </ui:SelectItem.Items>
+                              <ui:SelectItem.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88497a6e-a54a-405d-ab87-34b24828e1d5" InformativeScreenshot="3852581ff52f00541821c6df1b01c414" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='search-listing-results' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SelectItem.Target>
+                            </ui:SelectItem>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="604,351" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NSelectItem DisplayName="Select Item 'Select Item 'Nr. camere''" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[nrOfRooms_StringSelect]" ScopeIdentifier="911b5d1e-487b-4e93-8224-0da751fcc786" Version="V4">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4+</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.imobiliare.ro/vanzare-apartamente/bucuresti?map-latitude=44.428018465078985&amp;map-longitude=26.09682083129883&amp;map-zoom=12" CVScreenId="ceffc134-2496-40b8-9ea9-dcea663a4283" CvElementArea="868, 198, 137, 48" CvType="InputBox" DesignTimeRectangle="870, 201, 134, 42" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' class=' relative hidden h-[42px] items-center justify-between truncate whitespace-nowrap rounded-2xl bg-highlight bg-white py-2 pl-4 pr-10 font-normal leading-relaxed text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:flex lg:bg-highlight-500' parentid='search-listing-results' tag='DIV' aaname='                                                                        ' check:innerText='Nr. camere' /&gt;" Guid="16ac07d7-b02b-4dae-a558-a9912c686c2d" InformativeScreenshot="4117ee17a01299373a36b72ccd6e7262.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target CVScreenId="ceffc134-2496-40b8-9ea9-dcea663a4283" CvElementArea="641, 198, 215, 46" CvType="InputBox" DesignTimeRectangle="644, 201, 210, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                           Apartamente                                                                            Toate categoriile                                                                                                             ' aria-labelledby='listbox-label' tag='BUTTON' type='button' class='flex-1 text-left border-none text-gray-500 bg-white lg:bg-highlight rounded-2xl appearance-none block truncate w-full lg:w-[140px] xl:w-[210px] h-[42px] py-2 pl-4 pr-8 leading-relaxed focus:outline-none !bg-secondary-100 lg:bg-secondary-100' check:innerText='Apartamente' /&gt;" Guid="9e4a5952-02d3-4bce-8b0c-f5acab3e93aa" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                  </uix:NSelectItem>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <Sequence DisplayName="Sequence Price Max Select" sap:VirtualizedContainerService.HintSize="604,2179" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="s:Int32[]" Name="listMaxPrices">
+                                  <Variable.Default>
+                                    <VisualBasicValue x:TypeArguments="s:Int32[]" ExpressionText="New Integer(){10000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000, 110000, 120000, 130000, 140000, 160000, 180000, 200000, 220000, 250000, 300000, 350000, 400000, 450000, 500000, 550000, 600000}" />
+                                  </Variable.Default>
+                                </Variable>
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="570,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                              <ui:Comment sap:VirtualizedContainerService.HintSize="570,88" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// Write your comments in the Text property" />
+                              <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each currentPriceInList" sap:VirtualizedContainerService.HintSize="570,678" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listMaxPrices]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="x:Int32">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Int32" Name="currentPriceInList" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,532" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If Condition="[currentPriceInList &gt; price]" sap:VirtualizedContainerService.HintSize="502,472" sap2010:WorkflowViewState.IdRef="If_3">
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,222" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[price_StringSelect]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[currentPriceInList.ToString("N0").Replace(",", ".") + " *"]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                              </ui:ForEach>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="570,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1de67325-6e82-41af-95bb-b258b40beb46" InformativeScreenshot="02fc3b9d990b94c77a318aa2c9318468" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='search-listing-results' tag='DIV' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,351" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Preț'" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="911b5d1e-487b-4e93-8224-0da751fcc786" Version="V4">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.imobiliare.ro/vanzare-apartamente/bucuresti?map-latitude=44.428018465078985&amp;map-longitude=26.09682083129883&amp;map-zoom=12" CVScreenId="9e5b8bd1-9c57-4e97-b665-370c2596f090" CvElementArea="992, 198, 91, 46" CvType="InputBox" DesignTimeRectangle="995, 201, 87, 42" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' class='bg-white lg:bg-highlight-500 relative hidden h-[42px] items-center justify-between truncate whitespace-nowrap rounded-2xl bg-highlight py-2 pl-4 pr-10 font-normal leading-relaxed text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:flex !bg-white lg:!bg-highlight-500' parentid='search-listing-results' tag='DIV' aaname='                                                               ' check:innerText='Preț' /&gt;" Guid="4f13e3c5-177b-44f1-a123-797a321d23f5" InformativeScreenshot="ca7ab740c14170769810c8fd9e38a4ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="9e5b8bd1-9c57-4e97-b665-370c2596f090" CvElementArea="1096, 199, 170, 46" CvType="InputBox" DesignTimeRectangle="1098, 201, 167, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                                      Mai multe filtre                                                                                                                                                 Închide filtre                                                                                                        ' parentid='search-listing-results' tag='BUTTON' type='button' class='inline-flex h-[42px] items-center gap-4 rounded-2xl border border-secondary-500 bg-none px-4 py-2.5 font-normal text-secondary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:gap-2 2xl:gap-4' check:innerText='Mai multe filtre' /&gt;" Guid="24d3b95d-491c-4de7-b852-4b8126c9fa49" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
+                              <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'UL'" sap:VirtualizedContainerService.HintSize="570,257" sap2010:WorkflowViewState.IdRef="ClickOCRText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="[price_StringSelect]">
+                                <ui:ClickOCRText.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:ClickOCRText.CursorPosition>
+                                <ui:ClickOCRText.OCREngine>
+                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                    <ActivityFunc.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                    </ActivityFunc.Argument>
+                                    <p:UiPathDocumentOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" />
+                                  </ActivityFunc>
+                                </ui:ClickOCRText.OCREngine>
+                                <ui:ClickOCRText.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5babb429-0f9c-46b9-a847-0da393b461c7" InformativeScreenshot="7c69515bc094055f428f3350a237d742" Selector="&lt;webctrl aria-role='listbox' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' tag='UL' aria-labelledby='listbox-label' idx='2' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:ClickOCRText.Target>
+                              </ui:ClickOCRText>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,351" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NSelectItem DisplayName="Select Item 'Până la'" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[price_StringSelect]" ScopeIdentifier="911b5d1e-487b-4e93-8224-0da751fcc786" Version="V4">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="35">
+                                          <x:String>0 €</x:String>
+                                          <x:String>10.000 €</x:String>
+                                          <x:String>20.000 €</x:String>
+                                          <x:String>25.000 €</x:String>
+                                          <x:String>30.000 €</x:String>
+                                          <x:String>35.000 €</x:String>
+                                          <x:String>40.000 €</x:String>
+                                          <x:String>45.000 €</x:String>
+                                          <x:String>50.000 €</x:String>
+                                          <x:String>55.000 €</x:String>
+                                          <x:String>60.000 €</x:String>
+                                          <x:String>65.000 €</x:String>
+                                          <x:String>70.000 €</x:String>
+                                          <x:String>75.000 €</x:String>
+                                          <x:String>80.000 €</x:String>
+                                          <x:String>85.000 €</x:String>
+                                          <x:String>90.000 €</x:String>
+                                          <x:String>95.000 €</x:String>
+                                          <x:String>100.000 €</x:String>
+                                          <x:String>110.000 €</x:String>
+                                          <x:String>120.000 €</x:String>
+                                          <x:String>130.000 €</x:String>
+                                          <x:String>140.000 €</x:String>
+                                          <x:String>160.000 €</x:String>
+                                          <x:String>180.000 €</x:String>
+                                          <x:String>200.000 €</x:String>
+                                          <x:String>220.000 €</x:String>
+                                          <x:String>250.000 €</x:String>
+                                          <x:String>300.000 €</x:String>
+                                          <x:String>350.000 €</x:String>
+                                          <x:String>400.000 €</x:String>
+                                          <x:String>450.000 €</x:String>
+                                          <x:String>500.000 €</x:String>
+                                          <x:String>550.000 €</x:String>
+                                          <x:String>600.000 €</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.imobiliare.ro/vanzare-apartamente/bucuresti?map-latitude=44.428018465078985&amp;map-longitude=26.09682083129883&amp;map-zoom=12" CVScreenId="145122af-fed8-41e1-a7c2-4a941fa3679e" CvElementArea="1160, 255, 139, 48" CvType="InputBox" DesignTimeRectangle="1162, 259, 135, 42" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                                                                       Până la                                                                                                             ' aria-labelledby='listbox-label' tag='BUTTON' type='button' class='flex-1 text-left border-none text-gray-500 bg-white lg:bg-highlight rounded-2xl appearance-none block w-full lg:w-[135px] h-[42px] py-1.5 px-3.5 leading-relaxed focus:outline-none ' check:innerText='Până la' /&gt;" Guid="07adcf32-27f8-4a2f-8b77-dda4832d695d" InformativeScreenshot="d8222252772d2f3ab204d1216dad72b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="145122af-fed8-41e1-a7c2-4a941fa3679e" CvElementArea="1009, 256, 137, 46" CvType="InputBox" DesignTimeRectangle="1011, 259, 135, 42" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                                                                       De la                                                                                                             ' aria-labelledby='listbox-label' tag='BUTTON' type='button' class='flex-1 text-left border-none text-gray-500 bg-white lg:bg-highlight rounded-2xl appearance-none block w-full lg:w-[135px] h-[42px] py-1.5 px-3.5 leading-relaxed focus:outline-none ' check:innerText='De la' /&gt;" Guid="4481346b-d4d6-4f3e-8398-e763cb66e84c" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="570,110" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[price_StringSelect]" />
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="6i-AlVZ-iUeWDJSRSzvy-w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFcSURBVDhPYwCBt5o+4e80vC8A8W8g/k8A/36n7n3+rbpXGFjzO03vCCyKiMJv1b1DGYAMkM1YFRDGPudABvzCkND0QeXjEgPqBRmAIvilvPf/38cv/n/ObISLfQzK/P9jzcr/n7KrMAyCG/DeKur/rz3H/yODn5v2///a2vf/54Ht/38e3AHG36bN+v/ePAzVgE+x5f//vn4H1YYK/n398v/X6cNwA0D4x+Z1/z/6pSIM+LFoI1Q5EPz6/f/PjftAnf+gAv///759FcUAEP5a34ndgK/VE8ESv3YfhopADPixcS2KV3AaAPIOWGzZBqgIMCy27QaLfcquJs8AEBskBvI3VgO+z179/9/Hz2D8KaoUYsD8VcDw+AXGIDbYAJ/U/z+2bwTjL1WtcAMwExLxGJiQgBkDiwSRGJiU36t7+WOXJIzfqvuEgHMkKFeBTAMKEuMdoBqfcxDNDAwArA23N90kXV4AAAAASUVORK5CYII=" InformativeScreenshot="6f6eca85dd43d00fce1ea3d61a81856c.jpg" Reference="oZ1X5JKDbEez4gQkmD8CKw/caPhm4yx2kyG07mkhq7c-w" Selector="&lt;html app='chrome.exe' title='Apartamente de vânzare în București | Imobiliare.ro' /&gt;" Title="Apartamente de vânzare în București | Imobiliare.ro" Url="[urlSearch]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFcSURBVDhPYwCBt5o+4e80vC8A8W8g/k8A/36n7n3+rbpXGFjzO03vCCyKiMJv1b1DGYAMkM1YFRDGPudABvzCkND0QeXjEgPqBRmAIvilvPf/38cv/n/ObISLfQzK/P9jzcr/n7KrMAyCG/DeKur/rz3H/yODn5v2///a2vf/54Ht/38e3AHG36bN+v/ePAzVgE+x5f//vn4H1YYK/n398v/X6cNwA0D4x+Z1/z/6pSIM+LFoI1Q5EPz6/f/PjftAnf+gAv///759FcUAEP5a34ndgK/VE8ESv3YfhopADPixcS2KV3AaAPIOWGzZBqgIMCy27QaLfcquJs8AEBskBvI3VgO+z179/9/Hz2D8KaoUYsD8VcDw+AXGIDbYAJ/U/z+2bwTjL1WtcAMwExLxGJiQgBkDiwSRGJiU36t7+WOXJIzfqvuEgHMkKFeBTAMKEuMdoBqfcxDNDAwArA23N90kXV4AAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="7f2c26246cf30669fd3195857a371f97.jpg" Selector="&lt;html app='chrome.exe' title='Anunțuri imobiliare în România - Vânzare și închiriere proprietăți | Imobiliare.ro' /&gt;" Title="Anunțuri imobiliare în România - Vânzare și închiriere proprietăți | Imobiliare.ro" Url="[url]" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

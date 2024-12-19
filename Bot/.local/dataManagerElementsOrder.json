@@ -66,6 +66,40 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "WebsiteImobiliare.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "listMaxPrices&Sequence_14",
+        "nrOfRooms_StringSelect&Sequence_9",
+        "price_StringSelect&Sequence_9",
+        "isPageLoaded&Sequence_6",
+        "urlSearch&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "nrOfRooms",
+        "price",
+        "location",
+        "buy",
+        "url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WebsiteImobiliareStartTemporar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "nrOfRooms&Sequence_1",
+        "price&Sequence_1",
+        "location&Sequence_1",
+        "buy&Sequence_1",
+        "url2&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
