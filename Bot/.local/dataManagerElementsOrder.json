@@ -71,11 +71,20 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_1",
-        "dynamicNrRooms&Sequence_11",
+        "arrayRow&Sequence_99",
+        "i&Sequence_91",
+        "previousDataTable&Sequence_91",
+        "outputFilePath&Sequence_1",
+        "dynamicNrRooms&Sequence_89",
+        "dynamicNrRooms&Sequence_90",
+        "dynamicRentBuy&Sequence_68",
+        "locationExists&Sequence_68",
+        "elementExists&Sequence_1",
+        "savedPage&Sequence_1",
+        "extractResidenceDataTable&Sequence_1",
+        "extractUrlDataTable&Sequence_1",
         "locationExists&Sequence_3",
-        "dynamicRentBuy&Sequence_3",
-        "elementExists&Sequence_2"
+        "dynamicRentBuy&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
         "nrOfRooms",
