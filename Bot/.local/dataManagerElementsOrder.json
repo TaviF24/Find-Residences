@@ -71,11 +71,23 @@
       "Path": "WebsiteImobiliare.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "listMaxPrices&Sequence_14",
+        "price_StringSelect&Sequence_24",
+        "savedPage&Sequence_53",
+        "isPageLoaded&Sequence_6",
+        "urlSearch&Sequence_6",
         "nrOfRooms_StringSelect&Sequence_9",
         "price_StringSelect&Sequence_9",
-        "isPageLoaded&Sequence_6",
-        "urlSearch&Sequence_6"
+        "listMaxPrices&Sequence_14",
+        "indexDT&Sequence_54",
+        "writeToExcelBuyOrRent&Sequence_1",
+        "listMaxPrices&Sequence_1",
+        "excelFileContent&Sequence_1",
+        "outputExcelPath&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "savedPageUrl&Sequence_1",
+        "urlModified&Sequence_1",
+        "nrOfRooms_StringSelect&Sequence_1",
+        "isPageLoaded&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "nrOfRooms",
