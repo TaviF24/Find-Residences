@@ -80,24 +80,20 @@
   <Sequence DisplayName="WebsiteImobiliareStartTemporar" sap:VirtualizedContainerService.HintSize="1953,682.824" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://www.imobiliare.ro" Name="url2" />
-      <Variable x:TypeArguments="x:Boolean" Name="buy">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="buy" />
       <Variable x:TypeArguments="x:String" Name="location">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">Galati</Literal>
+          <Literal x:TypeArguments="x:String">Bucuresti</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="price">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="120000" />
+          <Literal x:TypeArguments="x:Int32" Value="72000" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="nrOfRooms">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="6" />
+          <Literal x:TypeArguments="x:Int32" Value="3" />
         </Variable.Default>
       </Variable>
     </Sequence.Variables>
