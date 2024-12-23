@@ -80,22 +80,22 @@
   <Sequence DisplayName="WebsiteImobiliareStartTemporar" sap:VirtualizedContainerService.HintSize="1953,682.824" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://www.imobiliare.ro" Name="url2" />
-      <Variable x:TypeArguments="x:Boolean" Default="True" Name="buy" />
+      <Variable x:TypeArguments="x:Boolean" Name="buy">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" Value="True" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="location">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">Bucuresti</Literal>
+          <Literal x:TypeArguments="x:String">Craiova</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="price">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="72000" />
+          <Literal x:TypeArguments="x:Int32" Value="94000" />
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="nrOfRooms">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="3" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="3" Name="nrOfRooms" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
