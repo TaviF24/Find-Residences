@@ -66,6 +66,52 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Website1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "minimumDataTable&Sequence_1",
+        "variable1&Sequence_99",
+        "dynamicNrRooms&Sequence_119",
+        "dynamicNrRooms&Sequence_117",
+        "arrayRow&Sequence_99",
+        "i&Sequence_91",
+        "previousDataTable&Sequence_91",
+        "outputFilePath&Sequence_1",
+        "dynamicRentBuy&Sequence_68",
+        "locationExists&Sequence_68",
+        "elementExists&Sequence_1",
+        "savedPage&Sequence_1",
+        "extractResidenceDataTable&Sequence_1",
+        "extractUrlDataTable&Sequence_1",
+        "locationExists&Sequence_3",
+        "dynamicRentBuy&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "nrOfRooms",
+        "price",
+        "location",
+        "buy",
+        "url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WebsiteSearch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Flowchart_1",
+        "nrOfRooms&Flowchart_1",
+        "price&Flowchart_1",
+        "location&Flowchart_1",
+        "buy&Flowchart_1",
+        "url1&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
