@@ -112,6 +112,40 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Email.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "securePassword&Sequence_2",
+        "mailMessages&Sequence_2",
+        "result&Sequence_2",
+        "filter&Sequence_2",
+        "emailAddress&Sequence_2",
+        "nrRooms&Sequence_2",
+        "location&Sequence_2",
+        "zone&Sequence_2",
+        "priceMax&Sequence_2",
+        "mailData&Sequence_2",
+        "mailData&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WebsiteImobiliareStartTemporar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "url2&Sequence_1",
+        "buy&Sequence_1",
+        "location&Sequence_1",
+        "price&Sequence_1",
+        "nrOfRooms&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
