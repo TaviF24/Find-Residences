@@ -71,6 +71,7 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "fileExists&Sequence_91",
         "minimumDataTable&Sequence_1",
         "variable1&Sequence_99",
         "dynamicNrRooms&Sequence_119",
