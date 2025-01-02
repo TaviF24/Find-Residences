@@ -79,16 +79,15 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="WebsiteSearch" sap:VirtualizedContainerService.HintSize="966,461.6239999999999" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="url1">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://trimbitasu-estate.ro/</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://trimbitasu-estate.ro/" Name="url1" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="buy" />
       <Variable x:TypeArguments="x:String" Default="Bucuresti" Name="location" />
-      <Variable x:TypeArguments="x:Int32" Default="150000" Name="price" />
+      <Variable x:TypeArguments="x:Int32" Name="price">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="150000" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:Int32" Default="3" Name="nrOfRooms" />
-      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">

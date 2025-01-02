@@ -71,6 +71,7 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "exitRetry&Sequence_139",
         "fileExists&Sequence_91",
         "minimumDataTable&Sequence_1",
         "variable1&Sequence_99",
@@ -103,7 +104,6 @@
       "Path": "WebsiteSearch.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "variable1&Flowchart_1",
         "nrOfRooms&Flowchart_1",
         "price&Flowchart_1",
         "location&Flowchart_1",
