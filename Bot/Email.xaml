@@ -122,7 +122,7 @@
       <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="694,2965.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="585,2965.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -312,29 +312,15 @@
                   <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))">[New Dictionary(Of String, List(Of String))()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:InvokeCode ContinueOnError="{x:Null}" Code="If Not mailData.ContainsKey(emailAddress) Then&#xD;&#xA;    mailData.Add(emailAddress, New List(Of String)())&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;mailData(emailAddress).Add(typeApartament)&#xD;&#xA;mailData(emailAddress).Add(location)&#xD;&#xA;mailData(emailAddress).Add(zone)&#xD;&#xA;mailData(emailAddress).Add(nrRooms)&#xD;&#xA;mailData(emailAddress).Add(priceMax)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="506,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="If Not mailData.ContainsKey(emailAddress) Then&#xA;    mailData.Add(emailAddress, New List(Of String)())&#xA;End If&#xA;&#xA;mailData(emailAddress).Add(typeApartament)&#xA;mailData(emailAddress).Add(location)&#xA;mailData(emailAddress).Add(zone)&#xA;mailData(emailAddress).Add(nrRooms)&#xA;mailData(emailAddress).Add(priceMax)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="506,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                 <ui:InvokeCode.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="emailAddress">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailAddress" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="mailData">
-                    <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" ExpressionText="mailData" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="typeApartament">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="result" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="location">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="location" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="zone">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="zone" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="priceMax">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="priceMax" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="nrRooms">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="nrRooms" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="emailAddress">[emailAddress]</InArgument>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="mailData">[mailData]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="typeApartament">[result]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="location">[location]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="zone">[zone]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="priceMax">[priceMax]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="nrRooms">[nrRooms]</InArgument>
                 </ui:InvokeCode.Arguments>
               </ui:InvokeCode>
             </Sequence>
