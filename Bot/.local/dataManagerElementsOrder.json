@@ -71,24 +71,15 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dynamicRentBuy&Sequence_3",
+        "locationExists&Sequence_3",
         "exitRetry&Sequence_139",
-        "fileExists&Sequence_91",
         "minimumDataTable&Sequence_1",
-        "variable1&Sequence_99",
-        "dynamicNrRooms&Sequence_119",
-        "dynamicNrRooms&Sequence_117",
-        "arrayRow&Sequence_99",
-        "i&Sequence_91",
-        "previousDataTable&Sequence_91",
         "outputFilePath&Sequence_1",
-        "dynamicRentBuy&Sequence_68",
-        "locationExists&Sequence_68",
         "elementExists&Sequence_1",
         "savedPage&Sequence_1",
         "extractResidenceDataTable&Sequence_1",
-        "extractUrlDataTable&Sequence_1",
-        "locationExists&Sequence_3",
-        "dynamicRentBuy&Sequence_3"
+        "extractUrlDataTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "nrOfRooms",
@@ -156,19 +147,7 @@
         "ExtractDataTable&Sequence_1",
         "outputExcelPath&Sequence_1",
         "listMaxPrices&Sequence_1",
-        "writeToExcelBuyOrRent&Sequence_1",
-        "nrOfRooms_StringSelect&Sequence_2",
-        "cookiesOnScreen&Sequence_62",
-        "price_StringSelect&Sequence_24",
-        "isSurveyOpen&Sequence_56",
-        "isPageLoaded&Sequence_6",
-        "urlSearch&Sequence_6",
-        "nrOfRooms_StringSelect&Sequence_9",
-        "price_StringSelect&Sequence_9",
-        "listMaxPrices&Sequence_14",
-        "indexDT&Sequence_54",
-        "excelFileContent&Sequence_54",
-        "nrOfRoomsStringExtracted&Sequence_55"
+        "writeToExcelBuyOrRent&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "url",

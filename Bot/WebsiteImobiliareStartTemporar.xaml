@@ -77,7 +77,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebsiteImobiliareStartTemporar" sap:VirtualizedContainerService.HintSize="1953,682.824" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebsiteImobiliareStartTemporar" sap:VirtualizedContainerService.HintSize="1918,571.2239999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://www.imobiliare.ro" Name="url2" />
       <Variable x:TypeArguments="x:Boolean" Name="buy">
@@ -87,15 +87,19 @@
       </Variable>
       <Variable x:TypeArguments="x:String" Name="location">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">Craiova</Literal>
+          <Literal x:TypeArguments="x:String">Bucuresti</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="price">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="94000" />
+          <Literal x:TypeArguments="x:Int32" Value="80000" />
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Default="3" Name="nrOfRooms" />
+      <Variable x:TypeArguments="x:Int32" Name="nrOfRooms">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="3" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
