@@ -16,7 +16,6 @@
         "fieldsToSearch&Flowchart_1",
         "fieldsCategories&Flowchart_1",
         "excelOutput&Flowchart_1",
-        "pathPDFScanned&Flowchart_1",
         "fields&Sequence_1",
         "excelFilePath&Sequence_1"
       ],
@@ -31,8 +30,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "mailData&Sequence_1",
         "attachedFiles&Sequence_1",
-        "mailData&Sequence_1"
+        "fileName&Sequence_1",
+        "isValidated&Sequence_1",
+        "listOfEmails&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -74,6 +76,15 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dynamicNrRooms&Sequence_119",
+        "dynamicRentBuy&Sequence_68",
+        "locationExists&Sequence_68",
+        "dynamicNrRooms&Sequence_117",
+        "previousDataTable&Sequence_91",
+        "i&Sequence_91",
+        "fileExists&Sequence_91",
+        "arrayRow&Sequence_99",
+        "variable1&Sequence_99",
         "dynamicRentBuy&Sequence_3",
         "locationExists&Sequence_3",
         "exitRetry&Sequence_139",
@@ -98,13 +109,15 @@
       "Path": "WebsiteSearch.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "nrOfRooms&Flowchart_1",
-        "price&Flowchart_1",
-        "location&Flowchart_1",
-        "buy&Flowchart_1",
+        "url2&Flowchart_1",
         "url1&Flowchart_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "location",
+        "price",
+        "nrOfRooms",
+        "buy"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -112,6 +125,7 @@
       "Path": "Email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "attachedFiles&Sequence_1",
         "securePassword&Sequence_2",
         "mailMessages&Sequence_2",
         "result&Sequence_2",
@@ -124,7 +138,8 @@
         "mailData&Sequence_6"
       ],
       "ArgumentsSectionElementsOrder": [
-        "attachedFiles",
+        "listOfEmails",
+        "fileName",
         "mailData"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -168,6 +183,23 @@
         "location",
         "price",
         "nrOfRooms"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SentEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "recipientEmail&Sequence_2",
+        "excelFilePath&Sequence_2",
+        "resources&Sequence_3",
+        "emailMessage&Sequence_3",
+        "filePath&Sequence_3",
+        "attachments&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "isValid"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
