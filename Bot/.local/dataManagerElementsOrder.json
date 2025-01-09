@@ -12,16 +12,16 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "pathPDFNative&Flowchart_1",
+        "outputFromPDF&Flowchart_1",
+        "fieldsToSearch&Flowchart_1",
+        "fieldsCategories&Flowchart_1",
+        "excelOutput&Flowchart_1",
         "pathPDFScanned&Flowchart_1",
         "fields&Sequence_1",
         "excelFilePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "excelOutput",
-        "fieldsCategories",
-        "fieldsToSearch",
-        "outputFromPDF",
+        "pathPDFNative",
         "isValidated"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -30,7 +30,10 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "attachedFiles&Sequence_1",
+        "mailData&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -118,10 +121,12 @@
         "location&Sequence_2",
         "zone&Sequence_2",
         "priceMax&Sequence_2",
-        "mailData&Sequence_2",
         "mailData&Sequence_6"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "attachedFiles",
+        "mailData"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
