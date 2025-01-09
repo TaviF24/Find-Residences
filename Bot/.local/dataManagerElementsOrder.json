@@ -12,10 +12,10 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "fields&Sequence_1",
-        "excelFilePath&Sequence_1",
+        "pathPDFNative&Flowchart_1",
         "pathPDFScanned&Flowchart_1",
-        "pathPDFNative&Flowchart_1"
+        "fields&Sequence_1",
+        "excelFilePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "excelOutput",
