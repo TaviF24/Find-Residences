@@ -12,10 +12,10 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "fields&Sequence_1",
-        "excelFilePath&Sequence_1",
+        "pathPDFNative&Flowchart_1",
         "pathPDFScanned&Flowchart_1",
-        "pathPDFNative&Flowchart_1"
+        "fields&Sequence_1",
+        "excelFilePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "excelOutput",
@@ -143,11 +143,19 @@
       "Path": "WebsiteImobiliare.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "nrOfRoomsStringExtracted&Sequence_55",
+        "indexDT&Sequence_54",
+        "excelFileContent&Sequence_54",
         "urlModified&Sequence_1",
         "ExtractDataTable&Sequence_1",
         "outputExcelPath&Sequence_1",
         "listMaxPrices&Sequence_1",
-        "writeToExcelBuyOrRent&Sequence_1"
+        "writeToExcelBuyOrRent&Sequence_1",
+        "nrOfRooms_StringSelect&Sequence_2",
+        "cookiesOnScreen&Sequence_62",
+        "cityNameDoesntExist&Sequence_73",
+        "price_StringSelect&Sequence_24",
+        "isSurveyOpen&Sequence_56"
       ],
       "ArgumentsSectionElementsOrder": [
         "url",
