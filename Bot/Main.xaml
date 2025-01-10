@@ -122,7 +122,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebsiteSearch - Invoke Workflow File (WebsiteSearch.xaml)" sap:VirtualizedContainerService.HintSize="382,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WebsiteSearch.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="buy">True</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="buy">[Convert.ToBoolean(mailData(listOfEmails(0))(0))]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="location">[mailData(listOfEmails(0))(1)]</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="price">[Cint(mailData(listOfEmails(0))(4))]</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="nrOfRooms">[Cint(mailData(listOfEmails(0))(3))]</InArgument>
