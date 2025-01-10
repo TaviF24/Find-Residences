@@ -85,7 +85,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="881.9999999999999,1304.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="732,1890" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="mailData" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="attachedFiles" />
@@ -98,58 +98,92 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email - Invoke Workflow File (Email.xaml)" sap:VirtualizedContainerService.HintSize="418,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Email.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email - Invoke Workflow File (Email.xaml)" sap:VirtualizedContainerService.HintSize="454,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Email.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="mailData">[mailData]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="fileName">[fileName]</OutArgument>
         <OutArgument x:TypeArguments="s:String[]" x:Key="listOfEmails">[listOfEmails]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PDF-Reading - Invoke Workflow File (PDF-Reading.xaml)" sap:VirtualizedContainerService.HintSize="418,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PDF-Reading.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Boolean" x:Key="isValidated">[isValidated]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="pathPDFNative">[".\..\Files\Input\" + fileName]</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <If Condition="[isValidated]" sap:VirtualizedContainerService.HintSize="418,862" sap2010:WorkflowViewState.IdRef="If_1">
-      <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,470.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebsiteSearch - Invoke Workflow File (WebsiteSearch.xaml)" sap:VirtualizedContainerService.HintSize="382,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WebsiteSearch.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="buy">[Convert.ToBoolean(mailData(listOfEmails(0))(0))]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="location">[mailData(listOfEmails(0))(1)]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="price">[Cint(mailData(listOfEmails(0))(4))]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="nrOfRooms">[Cint(mailData(listOfEmails(0))(3))]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SentEmail.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,260.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SentEmail.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </If.Else>
-    </If>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each i" sap:VirtualizedContainerService.HintSize="454,300" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[listOfEmails]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="i" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,169" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,109" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;ListOfEmails: &quot;+ i]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each i" sap:VirtualizedContainerService.HintSize="454,1360" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listOfEmails]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="i" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1238" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PDF-Reading - Invoke Workflow File (PDF-Reading.xaml)" sap:VirtualizedContainerService.HintSize="418,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PDF-Reading.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="isValidated">[isValidated]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="pathPDFNative">[".\..\Files\Input\" + mailData(i)(5)]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <If Condition="[isValidated]" sap:VirtualizedContainerService.HintSize="418,971" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,583" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,118" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[mailData(i)(1)]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebsiteSearch - Invoke Workflow File (WebsiteSearch.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WebsiteSearch.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="buy">[Convert.ToBoolean(mailData(i)(0))]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="location">[mailData(i)(1)]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="price">[Cint(mailData(i)(4))]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="nrOfRooms">[Cint(mailData(i)(3))]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SentEmail.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SentEmail.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
   </Sequence>
 </Activity>
