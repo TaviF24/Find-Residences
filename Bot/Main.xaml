@@ -85,7 +85,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="881.9999999999999,1907.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="732,2008" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:Int32, scg:List(x:String))" Name="mailData" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="attachedFiles" />
@@ -98,48 +98,49 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email - Invoke Workflow File (Email.xaml)" sap:VirtualizedContainerService.HintSize="454,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Email.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Email - Invoke Workflow File (Email.xaml)" sap:VirtualizedContainerService.HintSize="454,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Email.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:Int32, scg:List(x:String))" x:Key="mailData">[mailData]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="fileName">[fileName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each i" sap:VirtualizedContainerService.HintSize="454,301.3333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[listOfEmails]">
+    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))" CurrentIndex="{x:Null}" DisplayName="For Each i" sap:VirtualizedContainerService.HintSize="454,300" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mailData]">
       <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="x:String">
+        <ActivityAction x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:String" Name="i" />
+            <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))" Name="i" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,169.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,169" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,109.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;ListOfEmails: &quot;+ i]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,109" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Index &quot;+ i.Key.ToString+&quot; values: &quot;+i.Value(0)]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))" CurrentIndex="{x:Null}" DisplayName="For Each pair" sap:VirtualizedContainerService.HintSize="454,1373.3333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailData]">
+    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))" CurrentIndex="{x:Null}" DisplayName="For Each pair" sap:VirtualizedContainerService.HintSize="454,1478" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[mailData]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:Int32, scg:List(x:String))" Name="pair" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1250.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1356" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PDF-Reading - Invoke Workflow File (PDF-Reading.xaml)" sap:VirtualizedContainerService.HintSize="418,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PDF-Reading.xaml">
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="418,118" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;par.value(5) &quot;+pair.Value(5)]" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PDF-Reading - Invoke Workflow File (PDF-Reading.xaml)" sap:VirtualizedContainerService.HintSize="418,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PDF-Reading.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:Boolean" x:Key="isValidated">[isValidated]</OutArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="pathPDFNative">[".\..\Files\Input\" + pair.Value(5)]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <If Condition="[isValidated]" sap:VirtualizedContainerService.HintSize="418,980.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[isValidated]" sap:VirtualizedContainerService.HintSize="418,971" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,15 +148,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,589.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,583" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,118.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[pair.Value(1)]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebsiteSearch - Invoke Workflow File (WebsiteSearch.xaml)" sap:VirtualizedContainerService.HintSize="382,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="WebsiteSearch.xaml">
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,118" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[pair.Value(1)]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebsiteSearch - Invoke Workflow File (WebsiteSearch.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="WebsiteSearch.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Boolean" x:Key="buy">[Convert.ToBoolean(pair.Value(0))]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="location">[pair.Value(1)]</InArgument>
@@ -163,24 +164,26 @@
                       <InArgument x:TypeArguments="x:Int32" x:Key="nrOfRooms">[Cint(pair.Value(3))]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="SentEmail.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="SentEmail.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="recipientEmail">[pair.Value(6)]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,260.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="SentEmail.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SentEmail - Invoke Workflow File (SentEmail.xaml)" sap:VirtualizedContainerService.HintSize="382,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="SentEmail.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Boolean" x:Key="isValid">[isValidated]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="recipientEmail">[pair.Value(6)]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
