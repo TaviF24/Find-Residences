@@ -125,7 +125,8 @@
       "Path": "Email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "idx&Sequence_23",
+        "attachedFiles&Sequence_1",
+        "indexFor&Sequence_1",
         "securePassword&Sequence_23",
         "mailMessages&Sequence_23",
         "result&Sequence_23",
@@ -135,7 +136,7 @@
         "location&Sequence_23",
         "zone&Sequence_23",
         "priceMax&Sequence_23",
-        "attachedFiles&Sequence_1",
+        "idx&Sequence_23",
         "mailData&Sequence_6"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -191,7 +192,7 @@
       "Path": "SentEmail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "recipientEmail&Sequence_2",
+        "emptyDataTable&Sequence_2",
         "excelFilePath&Sequence_2",
         "resources&Sequence_3",
         "emailMessage&Sequence_3",
@@ -199,7 +200,19 @@
         "attachments&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
+        "recipientEmail",
         "isValid"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "pathPDFNative",
+        "isValidated"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
