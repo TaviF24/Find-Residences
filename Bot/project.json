@@ -8,6 +8,7 @@
     "UiPath.Excel.Activities": "[2.24.3]",
     "UiPath.GSuite.Activities": "[2.8.22]",
     "UiPath.Mail.Activities": "[1.24.11]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.8.23]",
     "UiPath.PDF.Activities": "[3.20.2]",
     "UiPath.System.Activities": "[24.11.0-preview]",
     "UiPath.Testing.Activities": "[24.10.3]",
