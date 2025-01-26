@@ -24345,15 +24345,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\teodo\\.nuget\\packages\\": {}
+    "C:\\Users\\Octavian\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Bot",
       "projectName": "Bot",
-      "projectPath": "C:\\Users\\teodo\\OneDrive - unibuc.ro\\Desktop\\GitHub\\RPA-Project\\Bot\\.local",
-      "packagesPath": "C:\\Users\\teodo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\teodo\\OneDrive - unibuc.ro\\Desktop\\GitHub\\RPA-Project\\Bot\\.local"
+      "projectPath": "D:\\Facultate\\RPA\\Proiect\\RPA-Project\\Bot\\.local",
+      "packagesPath": "C:\\Users\\Octavian\\.nuget\\packages\\",
+      "outputPath": "D:\\Facultate\\RPA\\Proiect\\RPA-Project\\Bot\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -24404,7 +24404,7 @@
             "version": "[24.11.1-preview, 24.11.1-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\teodo\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Octavian\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
