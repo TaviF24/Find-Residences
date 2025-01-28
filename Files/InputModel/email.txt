@@ -1,0 +1,47 @@
+1.
+
+chirie
+locatie: Bucuresti
+zona: Centru
+2 camere
+pret: 700 euro
+
+2. 
+
+chirie
+locatie: Bucuresti
+zona: Dristor
+3 camere
+pret: 500 euro
+
+3.
+
+chirie
+locatie: Ptest
+zona: centru
+2 camere
+pret: 400 euro
+
+4.
+
+chirie
+locatie: Bucuresti
+zona: Militari
+4 camere
+pret: 800 euro
+
+5.
+
+chirie
+locatie: Bucuresti
+zona: Lacul Tei
+2 camere
+pret: 400 euro
+
+6.
+
+chirie
+locatie: Bucuresti
+zona: Brancoveanu
+3 camere
+pret: 600 euro
