@@ -123,7 +123,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="PDF_Reading" sap:VirtualizedContainerService.HintSize="899.3333333333334,286.00436497235836" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="PDF_Reading" sap:VirtualizedContainerService.HintSize="714,374.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="outputFromPDF" />
       <Variable x:TypeArguments="s:String[][]" Name="fieldsToSearch" />
@@ -277,13 +277,9 @@
                           <av:PointCollection x:Key="ConnectorLocation">510,995 510,1045</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Validation of PDF" sap:VirtualizedContainerService.HintSize="484,1069.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                      <Sequence DisplayName="Validation of PDF" sap:VirtualizedContainerService.HintSize="484,1061.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
                         <Sequence.Variables>
-                          <Variable x:TypeArguments="s:String[][]" Name="fields">
-                            <Variable.Default>
-                              <VisualBasicValue x:TypeArguments="s:String[][]" ExpressionText="{}{&#xD;&#xA;&#x9;New String() {&quot;Banca: &quot;},&#xD;&#xA;&#x9;New String() {&quot;Nume Initiator plata:&quot;, &quot;Nume Initiator Plata:&quot;, &quot;Nume initiator Plata:&quot;, &quot;Nume initiator plata:&quot;}, &#xD;&#xA;&#x9;New String() {&quot;IBAN:&quot;, &quot;iban:&quot;},&#xD;&#xA;&#x9;New String() {&quot;Moneda:&quot;, &quot;Currency:&quot;, &quot;moneda:&quot;, &quot;currency:&quot;},&#xD;&#xA;    New String() {&quot;Suma:&quot;, &quot;Sum:&quot;, &quot;suma:&quot;, &quot;sum:&quot;}&#xD;&#xA;}" />
-                            </Variable.Default>
-                          </Variable>
+                          <Variable x:TypeArguments="s:String[][]" Default="[{&#xA;&#x9;New String() {&quot;Banca: &quot;},&#xA;&#x9;New String() {&quot;Nume Initiator plata:&quot;, &quot;Nume Initiator Plata:&quot;, &quot;Nume initiator Plata:&quot;, &quot;Nume initiator plata:&quot;}, &#xA;&#x9;New String() {&quot;IBAN:&quot;, &quot;iban:&quot;},&#xA;&#x9;New String() {&quot;Moneda:&quot;, &quot;Currency:&quot;, &quot;moneda:&quot;, &quot;currency:&quot;},&#xA;    New String() {&quot;Suma:&quot;, &quot;Sum:&quot;, &quot;suma:&quot;, &quot;sum:&quot;}&#xA;}]" Name="fields" />
                           <Variable x:TypeArguments="x:String" Default=".\..\Files\Banci_Romania_IBAN.xlsx" Name="excelFilePath" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
@@ -292,7 +288,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Add the list of bank names" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Add the list of bank names" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -370,7 +366,7 @@
                             </ui:ForEachRow.Body>
                           </ui:ForEachRow>
                         </Sequence>
-                        <Assign sap2010:Annotation.AnnotationText="fields variable has the next format (the order matters): &#xA;{&#xA;   {Banca}&#xA;   {Nume client}&#xA;   {IBAN}&#xD;&#xA;   {Moneda}&#xA;   {Suma}&#xA;}" sap:VirtualizedContainerService.HintSize="450,262.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign sap2010:Annotation.AnnotationText="fields variable has the next format (the order matters): &#xA;{&#xA;   {Banca}&#xA;   {Nume client}&#xA;   {IBAN}&#xA;   {Moneda}&#xA;   {Suma}&#xA;}" sap:VirtualizedContainerService.HintSize="450,255" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:String[][]">[fieldsToSearch]</OutArgument>
                           </Assign.To>
