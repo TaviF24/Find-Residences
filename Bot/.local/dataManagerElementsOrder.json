@@ -12,16 +12,15 @@
       "Path": "PDF-Reading.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "pathPDFNative&Flowchart_1",
-        "pathPDFScanned&Flowchart_1",
+        "outputFromPDF&Flowchart_1",
+        "fieldsToSearch&Flowchart_1",
+        "fieldsCategories&Flowchart_1",
+        "excelOutput&Flowchart_1",
         "fields&Sequence_1",
         "excelFilePath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "excelOutput",
-        "fieldsCategories",
-        "fieldsToSearch",
-        "outputFromPDF",
+        "pathPDFNative",
         "isValidated"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -30,7 +29,13 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "mailData&Sequence_1",
+        "attachedFiles&Sequence_1",
+        "fileName&Sequence_1",
+        "isValidated&Sequence_1",
+        "listOfEmails&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -39,10 +44,11 @@
       "Path": "PDF-Validation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currency&Sequence_1",
+        "currencyFlag&Sequence_50",
+        "currenciesAndMinAmount&Sequence_8",
         "sumCheck&Sequence_1",
-        "currenciesAndMinAmount&Sequence_38",
         "amount&Sequence_38",
-        "currency&Sequence_38",
         "j&Sequence_2",
         "atLeastOneFound&Sequence_2",
         "match&Sequence_3",
@@ -71,6 +77,15 @@
       "Path": "Website1.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dynamicNrRooms&Sequence_119",
+        "dynamicRentBuy&Sequence_68",
+        "locationExists&Sequence_68",
+        "dynamicNrRooms&Sequence_117",
+        "previousDataTable&Sequence_91",
+        "i&Sequence_91",
+        "fileExists&Sequence_91",
+        "arrayRow&Sequence_99",
+        "variable1&Sequence_99",
         "dynamicRentBuy&Sequence_3",
         "locationExists&Sequence_3",
         "exitRetry&Sequence_139",
@@ -95,13 +110,15 @@
       "Path": "WebsiteSearch.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "nrOfRooms&Flowchart_1",
-        "price&Flowchart_1",
-        "location&Flowchart_1",
-        "buy&Flowchart_1",
+        "url2&Flowchart_1",
         "url1&Flowchart_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "location",
+        "price",
+        "nrOfRooms",
+        "buy"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -109,19 +126,24 @@
       "Path": "Email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "securePassword&Sequence_2",
-        "mailMessages&Sequence_2",
-        "result&Sequence_2",
-        "filter&Sequence_2",
-        "emailAddress&Sequence_2",
-        "nrRooms&Sequence_2",
-        "location&Sequence_2",
-        "zone&Sequence_2",
-        "priceMax&Sequence_2",
-        "mailData&Sequence_2",
+        "attachedFiles&Sequence_1",
+        "indexFor&Sequence_1",
+        "securePassword&Sequence_23",
+        "mailMessages&Sequence_23",
+        "result&Sequence_23",
+        "filter&Sequence_23",
+        "emailAddress&Sequence_23",
+        "nrRooms&Sequence_23",
+        "location&Sequence_23",
+        "zone&Sequence_23",
+        "priceMax&Sequence_23",
+        "idx&Sequence_23",
         "mailData&Sequence_6"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "fileName",
+        "mailData"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -163,6 +185,35 @@
         "location",
         "price",
         "nrOfRooms"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SentEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "emptyDataTable&Sequence_2",
+        "excelFilePath&Sequence_2",
+        "resources&Sequence_3",
+        "emailMessage&Sequence_3",
+        "filePath&Sequence_3",
+        "attachments&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "recipientEmail",
+        "isValid"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "pathPDFNative",
+        "isValidated"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

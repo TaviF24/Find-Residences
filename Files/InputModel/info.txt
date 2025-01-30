@@ -1,0 +1,4 @@
+1, 2, 3 - corecte
+4 - nume gresit la semnatar
+5 - iban gresit
+6 - Nu are titlu
